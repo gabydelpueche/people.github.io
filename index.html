@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    img{
+        width: 30vw;
+        height: 60vh;
+    }
+
+    h2{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<script>
+    let pictures = ['ada.jpg', 'alan.jpg', 'charles.jpg', 'steve.jpg', 'bill.jpg','elon.png']
+    let names = ['Ada Lovelace', 'Alan Turing', 'Charles Babbage', 'Steve Jobs', 'Bill Gates', 'Elon Musk']
+    for (let i=0; i< names.length; i++){
+        const con = document.createElement('div')
+        const div = document.createElement('h2')
+        const img = document.createElement('img')
+        const text = document.createTextNode(names[i])
+        img.src = pictures[i]
+        div.append(text)
+        con.append(img, div)
+        document.body.append(con)
+    }
+</script>
+</body>
+</html>
